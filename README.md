@@ -1,4 +1,4 @@
-![alt text](/public/background.png)
+<img src="./public/background.png" alt="alt text" style="border: 2px solid #ccc; border-radius: 8px; max-width: 600px; margin-bottom: 20px;" />
 
 # Tarea S15 JS
 
@@ -32,7 +32,7 @@
 1. Clonar el repositorio
 
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/Luis-Fernando-MP/tarea-s15-js.git
 ```
 
 2. Instalar dependencias
