@@ -23,9 +23,9 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
+		<html lang="es" suppressContentEditableWarning suppressHydrationWarning data-lt-installed="true">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-10 px-6`}
+				className={`${geistSans.variable} ${geistMono.variable} bg-gradient-to-br from-blue-100 via-white to-blue-200 min-h-screen`}
 			>
 				{children}
 			</body>

@@ -28,28 +28,43 @@ export default function MetodoBabilonico() {
 	}, [numero])
 
 	return (
-		<div className="p-6 max-w-md mx-auto bg-white rounded-lg shadow space-y-4">
-			<h2 className="text-2xl font-bold text-center">Método Babilónico</h2>
-			<input
-				type="number"
-				min="0"
-				step="any"
-				value={numero}
-				onChange={(e) => setNumero(e.target.value === '' ? '' : parseFloat(e.target.value))}
-				className="w-full px-4 py-2 border rounded"
-				placeholder="Ingresa un número"
-			/>
-			<button onClick={calcularRaiz} className="bg-green-600 text-white w-full py-2 rounded hover:bg-green-700 transition">
+		<div className="p-8 max-w-lg mx-auto bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 rounded-2xl shadow-xl space-y-6 border border-blue-300">
+			<h2 className="text-3xl font-bold text-center drop-shadow-sm tracking-tight text-blue-800">Método Babilónico</h2>
+			<div className="space-y-2">
+				<label className="block text-blue-700 font-medium mb-1" htmlFor="numero">
+					Número a calcular
+				</label>
+				<input
+					id="numero"
+					type="number"
+					min="0"
+					step="any"
+					value={numero}
+					onChange={(e) => setNumero(e.target.value === '' ? '' : parseFloat(e.target.value))}
+					className="w-full px-4 py-2 border-2 border-blue-400 focus:border-blue-700 focus:ring-2 focus:ring-blue-200 rounded-lg transition outline-none bg-blue-50 text-lg text-blue-900 placeholder-blue-400"
+					placeholder="Ingresa un número"
+				/>
+			</div>
+			<button
+				onClick={calcularRaiz}
+				className="bg-gradient-to-r from-blue-600 to-blue-800 text-white w-full py-3 rounded-lg font-semibold text-lg shadow hover:from-blue-700 hover:to-blue-900 transition"
+			>
 				Calcular raíz
 			</button>
 
-			{estimacionInicial && <p className="text-sm text-gray-500">Estimación inicial: {estimacionInicial.toFixed(2)}</p>}
+			{estimacionInicial && (
+				<p className="text-base text-blue-900 bg-blue-100 px-3 py-2 rounded-lg border border-blue-300 text-center">
+					Estimación inicial: <span className="font-bold">{estimacionInicial.toFixed(2)}</span>
+				</p>
+			)}
 
 			{pasos.length > 0 && (
-				<div className="bg-gray-50 p-3 rounded text-sm text-gray-800 max-h-60 overflow-y-auto border">
-					<ul className="list-disc list-inside space-y-1">
+				<div className="bg-blue-50 p-4 rounded-xl text-base text-blue-900 max-h-64 overflow-y-auto border border-blue-200 shadow-inner">
+					<ul className="list-decimal list-inside space-y-1 pl-2">
 						{pasos.map((p, idx) => (
-							<li key={idx}>{p}</li>
+							<li key={idx} className="pl-1">
+								{p}
+							</li>
 						))}
 					</ul>
 				</div>

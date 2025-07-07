@@ -8,11 +8,13 @@ const App: FC = () => {
 	return (
 		<BrowserRouter>
 			<Navbar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/switch" element={<SwitchDias />} />
-				<Route path="/babilonico" element={<MetodoBabilonico />} />
-			</Routes>
+			<div className="min-h-screen py-12">
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/switch" element={<SwitchDias />} />
+					<Route path="/babilonico" element={<MetodoBabilonico />} />
+				</Routes>
+			</div>
 		</BrowserRouter>
 	)
 }
