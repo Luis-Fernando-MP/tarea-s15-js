@@ -21,8 +21,8 @@ export default function Home() {
 						</CardHeader>
 						<CardContent>
 							<ul className="text-sm text-gray-600 space-y-1">
-								<li>• useReducer</li>
-								<li>• Props opcionales</li>
+								<li>• Se uso useReducer</li>
+								<li>• Se usaron Props opcionales</li>
 							</ul>
 						</CardContent>
 					</Card>

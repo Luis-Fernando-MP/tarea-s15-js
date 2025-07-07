@@ -31,11 +31,13 @@ export default function SwitchDias({ defaultDay = 'Lunes' }: Props) {
 	const renderMessage = (day: string) => {
 		switch (day) {
 			case 'Lunes':
-				return 'Inicio de semana, ¡a darle!'
+				return 'Inicio de semana'
+			case 'Jueves':
+				return 'Clases de JS'
 			case 'Viernes':
-				return 'Último empujón 💪'
+				return 'último día de clases de JS'
 			case 'Domingo':
-				return 'Día de descanso 😴'
+				return 'Día de descanso'
 			default:
 				return 'Día normal'
 		}
